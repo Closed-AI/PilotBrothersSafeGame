@@ -1,0 +1,51 @@
+﻿<Window
+    x:Class="PilotBrothersSafe.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:PilotBrothersSafe="clr-namespace:PilotBrothersSafe"
+    Title="Сейф братьев пилотов"
+    Width="750"
+    Height="675"
+    TextOptions.TextFormattingMode="Display">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="6*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Label
+                HorizontalAlignment="Center">
+                Размер поля
+            </Label>
+            <TextBox
+                Name="textBox"
+                Width="90"
+                Height="23"
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center">
+            </TextBox>
+            <Button
+                Name="createButton"
+                Width="90"
+                Height="23"
+                HorizontalAlignment="Center"
+                Margin="0,0,0,10"
+                Click="СreateButton_Click"
+                Content="Создать" />
+            <Button
+                Name="refreshButton"
+                Width="90"
+                Height="23"
+                HorizontalAlignment="Center"
+                Margin="0,0,0,10"
+                Click="RefreshButton_Click"
+                Content="Перемешать" />
+        </StackPanel>
+        <WrapPanel
+            Grid.Column="1"
+            Name="wrapPanel"
+            Width="600"
+            Height="600"
+            Background="#FFE0E0E0" />
+    </Grid>
+</Window>
